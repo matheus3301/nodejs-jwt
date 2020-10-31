@@ -1,0 +1,20 @@
+{
+  "name": "nodejs-jwt",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/matheus3301/nodejs-jwt.git",
+  "author": "Matheus Rocha <monteiromatheus.rocha@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "dev": "nodemon src/index.js"
+  },
+  "dependencies": {
+    "bcrypt": "^5.0.0",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "mongoose": "^5.10.11"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.6"
+  }
+}
