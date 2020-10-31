@@ -1,3 +1,5 @@
-class SessionController {}
+class SessionController {
+  async store(req, res) {}
+}
 
 module.exports = new SessionController();
