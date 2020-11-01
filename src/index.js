@@ -2,9 +2,10 @@ const express = require('express');
 const dotenv = require('dotenv');
 const mongoose = require('mongoose');
 
+require('express-async-errors');
+
 dotenv.config();
 
-//Using mongo to save user data
 mongoose.connect(process.env.DATABASE_URL, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
@@ -12,11 +13,13 @@ mongoose.connect(process.env.DATABASE_URL, {
 });
 
 const routes = require('./routes');
+const errorHandler = require('./errors/handler');
 
 const app = express();
 
 app.use(express.json());
 app.use(routes);
+app.use(errorHandler);
 
 const port = 3333 || process.env.PORT;
 app.listen(port, () => {

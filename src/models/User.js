@@ -4,12 +4,14 @@ const bcrypt = require('bcrypt');
 const schema = new Schema({
   username: {
     type: String,
-    required: true,
+    index: true,
+    require: true,
     unique: true,
+    sparse: true,
   },
   password: {
     type: String,
-    required: true,
+    require: true,
   },
 });
 
