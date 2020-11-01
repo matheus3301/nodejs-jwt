@@ -2,6 +2,7 @@ const User = require('../models/User');
 class UserController {
   async store(req, res) {
     const { username, password } = req.body;
+
     const user = await User.create({
       username,
       password,
