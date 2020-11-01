@@ -11,6 +11,7 @@ First, you have to set the environement variables.I gave a .env.example file, yo
 ```
 DATABASE_URL=<yourdatabaseurl>
 APP_SECRET=<yourappkey>
+ENVIRONMENT=development
 ```
 
 The APP_SECRET is used for creating the JWT, you can use what you want to.
