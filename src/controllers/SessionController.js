@@ -6,6 +6,8 @@ class SessionController {
   async store(req, res) {
     const { username, password } = req.body;
 
+    console.log(`${username} trying to create a new session`);
+
     const user = await User.findOne({ username });
 
     if (!user)
